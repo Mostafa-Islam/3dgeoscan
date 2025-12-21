@@ -15,7 +15,7 @@ const CheckmarkIcon = () => (
 
 export default function About() {
   return (
-    <section className="py-32 bg-white h-full snap-start">
+    <section id="about" className="py-32 bg-white h-screen snap-start">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* main content */}
