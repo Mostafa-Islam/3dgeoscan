@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center">
+    <section className="relative h-screen flex items-center snap-start">
 
       {/* background image */}
       <div
