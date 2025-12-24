@@ -3,16 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { label: "About us", href: "#about" },
-  { label: "Projects", href: "#projects" },
+  { label: "About us", href: "/" },
+  { label: "Projects", href: "/projects" },
   { label: "Services", href: "#services" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Check if we're on the home page
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,10 +28,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Navbar is solid if: scrolled OR not on home page
+  const isSolid = scrolled || !isHomePage;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
+        isSolid ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +51,7 @@ export default function Navbar() {
             />
             <span className="text-xl">
               <span className="text-orange-500">3D</span>
-              <span className={`${scrolled ? "text-gray-900" : "text-white"} font-bold`}> GEOSCAN</span>
+              <span className={`${isSolid ? "text-gray-900" : "text-white"} font-bold`}> GEOSCAN</span>
             </span>
           </Link>
 
@@ -54,7 +62,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`${
-                  scrolled
+                  isSolid
                     ? "text-gray-900 hover:text-gray-700"
                     : "text-white/80 hover:text-white"
                 } transition-colors text-sm font-medium`}
@@ -76,7 +84,7 @@ export default function Navbar() {
 
           {/* mobile menu button */}
           <button
-            className={`md:hidden ${scrolled ? "text-gray-900" : "text-white"}`}
+            className={`md:hidden ${isSolid ? "text-gray-900" : "text-white"}`}
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg

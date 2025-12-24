@@ -1,13 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollIndicator() {
     const [activeSection, setActiveSection] = useState(0);
     const [sections, setSections] = useState<HTMLElement[]>([]);
     const [isVisible, setIsVisible] = useState(false);
+    const pathname = usePathname();
+
+    // Only show on home page
+    const isHomePage = pathname === '/';
 
     useEffect(() => {
+        // Don't run if not on home page
+        if (!isHomePage) return;
+
         // Automatically find all sections on the page, excluding hero
         const allSections = document.querySelectorAll('section[id]:not(#hero)');
         setSections(Array.from(allSections) as HTMLElement[]);
@@ -59,7 +67,7 @@ export default function ScrollIndicator() {
         return () => {
             allSections.forEach((section) => observer.unobserve(section));
         };
-    }, []);
+    }, [isHomePage]);
 
     // Scroll to section when clicking a dot
     const scrollToSection = (index: number) => {
@@ -68,8 +76,8 @@ export default function ScrollIndicator() {
         }
     };
 
-    // Don't render if no sections found or if not visible
-    if (sections.length === 0 || !isVisible) return null;
+    // Don't render if not on home page, no sections found, or not visible
+    if (!isHomePage || sections.length === 0 || !isVisible) return null;
 
     return (
         <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4">
