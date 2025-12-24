@@ -81,7 +81,7 @@ export default function ScrollIndicator() {
                 <button
                     key={section.id}
                     onClick={() => scrollToSection(index)}
-                    className="relative group"
+                    className="relative group cursor-pointer"
                     aria-label={`Go to ${section.id}`}
                 >
                     {/* Dot */}

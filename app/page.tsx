@@ -5,6 +5,7 @@ import Services from "@/components/home/services";
 import Projects from "@/components/home/projects";
 import Solutions from "@/components/home/vision";
 import Contact from "@/components/home/contact";
+import Products from "@/components/home/products";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home() {
       <StatsSection/>
       <Solutions />
       <Services />
+      <Products />
       <Projects />
       <Contact />
       
