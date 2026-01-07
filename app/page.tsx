@@ -6,6 +6,7 @@ import Projects from "@/components/home/projects";
 import Solutions from "@/components/home/vision";
 import Contact from "@/components/home/contact";
 import Products from "@/components/home/products";
+import LatestNews from "@/components/home/updates";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
       <Products />
       <Services />
       <Projects />
+      <LatestNews />
       <Contact />
       
     </>
