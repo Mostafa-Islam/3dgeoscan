@@ -2,7 +2,7 @@
 
 export default function Contact() {
     return (
-        <section id="contact" className="h-screen snap-start flex items-center justify-center bg-white pt-[80px] relative">
+        <section id="contact" className="h-[540px] snap-start flex items-center justify-center bg-white pt-[80px] relative">
             <div 
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: "url('./images/contact-bg.png')" }}
