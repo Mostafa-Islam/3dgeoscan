@@ -13,8 +13,8 @@ export default function Home() {
       <Features />
       <StatsSection/>
       <Solutions />
-      <Services />
       <Products />
+      <Services />
       <Projects />
       <Contact />
       

@@ -5,26 +5,30 @@ export default function Services() {
         {
             title: "3D Scanning",
             description:
-                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+                "High-precision laser scanning technology to capture detailed spatial data of structures, terrain, and infrastructure. Create accurate 3D models for documentation, analysis, and planning.",
             dark: false,
+            image: "/images/3dscans.png",
         },
         {
-            title: "3D Scanning",
+            title: "Underground Utilities",
             description:
-                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+                "Advanced detection and mapping of underground utilities including pipes, cables, and infrastructure. Prevent costly damages and ensure safe excavation with precise subsurface mapping.",
             dark: false,
+            image: "/images/undergroundutil.jpg",
         },
         {
-            title: "3D Scanning",
+            title: "Digital Twin",
             description:
-                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+                "Create dynamic virtual replicas of physical assets and environments. Enable real-time monitoring, simulation, and predictive maintenance for enhanced decision-making and asset management.",
             dark: false,
+            image: "/images/digitwin.jpg",
         },
         {
-            title: "3D Scanning",
+            title: "Geophysical Studies",
             description:
-                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+                "Comprehensive subsurface investigation using advanced geophysical methods. Analyze soil conditions, identify geological features, and assess site characteristics for construction and environmental projects.",
             dark: false,
+            image: "/images/geophysicstudies.png",
         },
     ]
 
@@ -42,7 +46,7 @@ export default function Services() {
                         >
                             <div
                                 className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-                                <img src="./images/3d-service.png"
+                                <img src={service.image}
                                     className="h-full w-full object-cover" alt="Background" />
                                 <div className="absolute inset-0 bg-black/50"></div>
                             </div>

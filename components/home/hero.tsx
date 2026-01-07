@@ -8,8 +8,8 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/hero-bg.jpg')",
-          transform: "scaleX(-1)"
+          backgroundImage: "url('/images/hero.jpg')",
+          
         }}
       />
 
@@ -33,7 +33,7 @@ export default function Hero() {
           <br />
           Transformed by
           <br />
-          <span className="text-orange-500">3d Geo-Intelligence</span>
+          <span className="text-orange-500">3D Geo-Intelligence</span>
         </h1>
 
         {/* description */}
@@ -45,18 +45,18 @@ export default function Hero() {
 
         {/* buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link
+          {/* <Link
             href="/videos"
             className="bg-gradient-to-r from-orange-600 to-orange-400 text-white px-6 py-3 rounded-lg text-base font-medium hover:from-orange-500 hover:to-orange-700 transition-colors text-center"
           >
             Watch our videos
-          </Link>
-          <Link
+          </Link> */}
+            <Link
             href="/videos"
-            className="border border-white text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-white hover:text-gray-900 transition-colors text-center"
-          >
+            className="bg-white/20  border border-white text-white px-6 py-3 rounded-xl text-base font-medium hover:bg-white hover:text-gray-900 transition-colors text-center"
+            >
             Watch our videos
-          </Link>
+            </Link>
         </div>
       </div>
 

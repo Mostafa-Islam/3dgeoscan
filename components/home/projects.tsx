@@ -1,11 +1,11 @@
 export default function Projects() {
     const projects = [
-        { size: "large", image: "/images/project-1-5-6.png" },
-        { size: "large", image: "/images/project-2.png" },
-        { size: "small", image: "/images/project-3.png" },
-        { size: "small", image: "/images/project-4.png" },
-        { size: "small", image: "/images/project-1-5-6.png" },
-        { size: "small", image: "/images/project-1-5-6.png" },
+        { name :"El Morssi Abo El Abbas Mosque ", tag: "3D scan to BIM", image: "/images/almorssimosque.png" },
+        { name: "Saudi Consulate", tag: "3D scan to BIM", image: "/images/saudiconsulate.jpg" },
+        { name: "Knauf Gypsum Factory", tag: "3D scan to BIM", image: "/images/knauf.png" },
+        { name: "Movenpick", tag: "3D scan to BIM", image: "/images/movenpick.jpg" },
+        { name: "Steel Warehouse", tag: "3D scan to BIM", image: "/images/steelwarehouse.jpg" },
+        { name: "Monorail", tag: "3D scan to BIM", image: "/images/monorail.jpg" },
     ]
 
     return (
@@ -26,9 +26,9 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div>
                                 <span className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white text-xs px-3 py-1 rounded-lg mb-2">
-                                    industry
+                                    {projects[0].tag}
                                 </span>
-                                <h3 className="text-white text-2xl font-bold">Project Name</h3>
+                                <h3 className="text-white text-2xl font-bold">{projects[0].name}</h3>
                             </div>
                         </div>
                     </div>
@@ -38,9 +38,9 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div>
                                 <span className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white text-xs px-3 py-1 rounded-lg mb-2">
-                                    industry
+                                    {projects[1].tag}
                                 </span>
-                                <h3 className="text-white text-2xl font-bold">Project Name</h3>
+                                <h3 className="text-white text-2xl font-bold">{projects[1].name}</h3>
                             </div>
                         </div>
                     </div>
@@ -51,9 +51,9 @@ export default function Projects() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
                                 <div>
                                     <span className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white text-xs px-2 py-1 rounded-lg mb-1">
-                                        industry
+                                        {project.tag}
                                     </span>
-                                    <h3 className="text-white font-bold">Project Name</h3>
+                                    <h3 className="text-white font-bold">{project.name}</h3>
                                 </div>
                             </div>
                         </div>
