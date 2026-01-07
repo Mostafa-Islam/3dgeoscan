@@ -7,28 +7,28 @@ const newsItems = [
         title: "FARO Technology Day 2025",
         date: "November 14, 2025",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        image: "/images/product-1.png",  // <-- Add your image path
+        image: "/images/conf.png",  // <-- Add your image path
     },
     {
         id: 2,
         title: "FARO Technology Day 2025",
         date: "November 14, 2025",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        image: "/images/product-1.png",  // <-- Add your image path
+        image: "/images/conf.png",  // <-- Add your image path
     },
     {
         id: 3,
         title: "FARO Technology Day 2025",
         date: "November 14, 2025",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        image: "/images/product-1.png",  // <-- Add your image path
+        image: "/images/conf.png",  // <-- Add your image path
     },
 ];
 
 // News Card Component
 function NewsCard({ item }: { item: typeof newsItems[0] }) {
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 snap-start">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* Image Container */}
             <div className="relative h-64 overflow-hidden">
                 <img
@@ -62,21 +62,21 @@ function NewsCard({ item }: { item: typeof newsItems[0] }) {
 // Main Section Component
 export default function LatestNews() {
     return (
-        <section className="py-20 bg-gray-50">
+        <section id="News" className="h-screen snap-start flex items-center bg-white pt-[80px]">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
-                <div className="mb-12">
-                    <span className="text-sm font-bold text-orange-500 mb-2 block">
+                {/* <div className="mb-12"> */}
+                    <span className="lg:text-sm font-bold text-orange-500 mb-8">
                         News & Updates
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-4xl lg:text-5xl sm:text-2xl font-bold text-gray-900 mb-1 leading-tight">
                         Latest from 3D Geoscan
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 mb-2 leading-relaxed">
                         Latest from 3D Geoscan
                     </p>
-                </div>
+                {/* </div> */}
 
                 {/* News Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

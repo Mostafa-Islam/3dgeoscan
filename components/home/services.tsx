@@ -5,28 +5,28 @@ export default function Services() {
         {
             title: "3D Scanning",
             description:
-                "High-precision laser scanning technology to capture detailed spatial data of structures, terrain, and infrastructure. Create accurate 3D models for documentation, analysis, and planning.",
+                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
             dark: false,
             image: "/images/3dscans.png",
         },
         {
             title: "Underground Utilities",
             description:
-                "Advanced detection and mapping of underground utilities including pipes, cables, and infrastructure. Prevent costly damages and ensure safe excavation with precise subsurface mapping.",
+                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
             dark: false,
             image: "/images/undergroundutil.jpg",
         },
         {
             title: "Digital Twin",
             description:
-                "Create dynamic virtual replicas of physical assets and environments. Enable real-time monitoring, simulation, and predictive maintenance for enhanced decision-making and asset management.",
+                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
             dark: false,
             image: "/images/digitwin.jpg",
         },
         {
             title: "Geophysical Studies",
             description:
-                "Comprehensive subsurface investigation using advanced geophysical methods. Analyze soil conditions, identify geological features, and assess site characteristics for construction and environmental projects.",
+                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
             dark: false,
             image: "/images/geophysicstudies.png",
         },
