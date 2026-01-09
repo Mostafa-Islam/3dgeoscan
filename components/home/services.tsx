@@ -32,16 +32,16 @@ export default function Services() {
     ]
 
     return (
-        <section id="services" className="h-screen snap-start flex items-center bg-white pt-[80px]">
-            <div className="max-w-7xl mx-auto px-6">
-                <span className="lg:text-sm font-bold text-orange-500 mb-8">Services</span>
-                <h2 className="text-4xl lg:text-5xl sm:text-2xl font-bold text-gray-900 mb-4 leading-tight">Comprehensive 3D Geospatial Solutions</h2>
+        <section id="services" className="h-screen md:snap-start flex items-center bg-white pt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <span className="text-sm font-bold text-orange-500 mb-8">Services</span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">Comprehensive 3D Geospatial Solutions</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {services.map((service, idx) => (
                         <div
                             key={idx}
-                            className={`group relative rounded-2xl p-8 bg-[#E9E9E9] text-black relative overflow-hidden transition-all hover:shadow-2xl`}
+                            className={`group relative rounded-2xl p-6 md:p-8 bg-[#E9E9E9] text-black relative overflow-hidden transition-all hover:shadow-2xl`}
                         >
                             <div
                                 className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100">
@@ -63,8 +63,8 @@ export default function Services() {
                                     </svg>
 
                                 </div>
-                                <h3 className="text-black text-2xl font-bold mb-3 transition-all duration-500 group-hover:translate-y-20 group-hover:text-white">{service.title}</h3>
-                                <p className="text-gray-600 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0">{service.description}</p>
+                                <h3 className="text-black text-xl md:text-2xl font-bold mb-3 transition-all duration-500 group-hover:translate-y-20 group-hover:text-white">{service.title}</h3>
+                                <p className="text-sm md:text-base text-gray-600 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0">{service.description}</p>
                             </div>
                         </div>
                     ))}
