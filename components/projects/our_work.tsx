@@ -33,7 +33,7 @@ export default function OurWork() {
     };
 
     return (
-        <section className="min-h-screen bg-white py-20 snap-start flex items-center">
+        <section className="min-h-screen bg-white py-20 flex items-center">
             <div className="max-w-7xl mx-auto px-6">
                 
                 {/* Header */}
