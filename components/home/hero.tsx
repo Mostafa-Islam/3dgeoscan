@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id = "hero" className="relative h-screen flex items-center snap-start">
+    <section id = "hero" className="relative min-h-screen flex items-center md:snap-start">
 
       {/* background image */}
       <div
@@ -61,7 +61,7 @@ export default function Hero() {
       </div>
 
       {/* scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
         <span className="text-white/70 text-sm">scroll for more</span>
         <svg
           className="w-5 h-5 text-white/70"

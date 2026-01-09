@@ -65,7 +65,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 snap-start">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* Image Container */}
             <div
                 className="relative h-48 overflow-hidden cursor-pointer"
