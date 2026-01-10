@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { products } from '@/constants/products';
 
 export default function Products() {
     // Brand color for consistency
@@ -9,81 +11,8 @@ export default function Products() {
     // Animation state
     const [isTransitioning, setIsTransitioning] = useState(false);
 
-    // Products data array - Updated to match the fields in the new design (Lists & Software)
-    const products = [
-        {
-            id: 1,
-            title: "ZEB Horizon",
-            logos: ["GeoSLAM"], 
-            description: "The ZEB Horizon is a handheld mobile mapping scanner that captures highly accurate 3D data in any environment. With SLAM technology, it provides rapid data collection for complex indoor and outdoor spaces without GPS or targets.",
-            productImage: "/images/product-1.png",
-            packageIncludes: [
-                "ZEB Horizon Scanner",
-                "Rechargeable Battery",
-                "Charging Dock",
-                "Protective Carry Case"
-            ],
-            software: "GeoSLAM Hub - Processing and point cloud management"
-        },
-        {
-            id: 2,
-            title: "ZEB Vision",
-            logos: ["GeoSLAM"],
-            description: "Vision is the perfect addition to the ZEB Horizon. Better than ever colorization and immersive point cloud walk-throughs created to optimize workflows.",
-            productImage: "/images/product-2.png",
-            packageIncludes: [
-                "ZEB Vision Camera",
-                "Mounting Bracket",
-                "Connection Cables",
-                "Hard Carry Case"
-            ],
-            software: "GeoSLAM Connect - Automated processing workflows"
-        },
-        {
-            id: 3,
-            title: "FARO Orbis",
-            logos: ["FARO", "GeoSLAM"],
-            description: "FARO Orbis 2 in 1 Mobile Laser Scanner and stationery scanner all in one device. A unique mobile scanning solution created to optimize workflows and elevate productivity.",
-            productImage: "/images/product-3.png",
-            packageIncludes: [
-                "Orbis Scanner Unit",
-                "Mobile Mount",
-                "Stationary Tripod Adapter",
-                "Quick Charge Battery"
-            ],
-            software: "Orbis Capture Suite & Connect"
-        },
-        {
-            id: 4,
-            title: "FARO Focus MAX",
-            logos: ["FARO"],
-            description: "FARO Focus Core has 100, 200, 400 m range that’s well-suited to industrial facility management, historic preservation, collecting as-built documentation, and more.",
-            productImage: "/images/product-4.png",
-            packageIncludes: [
-                "Focus MAX Unit",
-                "Carbon Fiber Tripod",
-                "SD Card (64GB)",
-                "Power Block Battery"
-            ],
-            software: "FARO SCENE - Registration and Processing"
-        },
-        {
-            id: 1,
-            title: "FARO® Blink™",
-            // Simulating the small logos row
-            logos: ["FARO", "BLINK",], 
-            description: "From site to insights, Blink is a reality capture solution designed for simplicity and accessibility. It brings high-quality visualization and automated workflows into the hands of designers, builders, surveyors, operators, and public safety professionals.",
-            productImage: "/images/product-5.png",
-            // New fields for the split list view
-            packageIncludes: [
-                "Blink Camera Unit",
-                "Adjustable Tripod Mount",
-                "High-Capacity Battery Pack",
-                "USB-C Charging Cable"
-            ],
-            software: "Blink Cloud Platform - Real-time data processing and visualization"
-        },
-    ];
+
+    const router = useRouter();
 
     // State for carousel
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -121,7 +50,7 @@ export default function Products() {
         // Kept original Section & Container classes
         <section id='products' className="h-screen snap-start flex items-center bg-white pt-[80px]">
             <div className="max-w-7xl mx-auto px-4 w-full">
-                
+
                 {/* Section Heading */}
                 <h2 className="text-center text-4xl lg:text-5xl sm:text-2xl font-bold text-gray-900 mb-12 leading-tight">
                     Our Products
@@ -138,9 +67,8 @@ export default function Products() {
                     </button>
 
                     {/* Main Grid Content: Changed from 3 columns to 2 columns */}
-                    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full min-h-[450px] transition-all duration-600 ease-in-out ${
-                        isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-                    }`}>
+                    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full min-h-[450px] transition-all duration-600 ease-in-out ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                        }`}>
 
                         {/* --- Column 1: Product Image (Card Style) --- */}
                         <div className="relative w-full aspect-square max-h-[450px] bg-gray-50 rounded-[40px] flex items-center justify-center p-8">
@@ -154,10 +82,10 @@ export default function Products() {
 
                         {/* --- Column 2: Product Details --- */}
                         <div className="flex flex-col justify-center h-full">
-                            
+
                             {/* Title & Logos */}
                             <h3 className="text-4xl font-bold text-gray-900 mb-2">{currentProduct.title}</h3>
-                            
+
                             {/* Simple Logo/Badge placeholder row */}
                             <div className="flex items-center gap-4 mb-6">
                                 {currentProduct.logos.map((logo, i) => (
@@ -197,9 +125,16 @@ export default function Products() {
                             </div>
 
                             {/* CTA Button */}
-                            <div>
+                            <div className='flex gap-4'>
                                 <button className={`${brandBgClass} text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition cursor-pointer`}>
                                     Get a Quote
+                                </button>
+
+                                <button
+                                    onClick={() => router.push(`/products/${currentProduct.slug}`)}
+                                    className={`${brandBgClass} text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition`}
+                                >
+                                    Learn More
                                 </button>
                             </div>
                         </div>
@@ -220,11 +155,10 @@ export default function Products() {
                             key={index}
                             onClick={() => handleDotClick(index)}
                             aria-label={`Go to slide ${index + 1}`}
-                            className={`w-3 h-3 rounded-full transition ${
-                                currentIndex === index
-                                    ? brandBgClass
-                                    : 'bg-gray-300 hover:bg-gray-400 cursor-pointer'
-                            }`}
+                            className={`w-3 h-3 rounded-full transition ${currentIndex === index
+                                ? brandBgClass
+                                : 'bg-gray-300 hover:bg-gray-400 cursor-pointer'
+                                }`}
                         />
                     ))}
                 </div>
