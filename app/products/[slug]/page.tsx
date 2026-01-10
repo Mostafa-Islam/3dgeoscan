@@ -12,8 +12,9 @@ export default function ProductPage() {
   if (!product) return <p className="p-10">Product not found</p>;
 
   return (
-    <section className="min-h-screen pt-28 px-6 max-w-6xl mx-auto snap-start">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen pt-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
         {/* Product Image */}
         <div
@@ -32,20 +33,21 @@ export default function ProductPage() {
 
         {/* Product Info */}
         <div>
-          <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
+          <h1 className="text-4xl text-gray-900 font-bold mb-4">{product.title}</h1>
 
           <p className="text-gray-600 mb-6">{product.description}</p>
 
-          <h3 className="font-semibold mb-2">Package Includes</h3>
-          <ul className="list-disc list-inside text-gray-600 mb-6">
+          <h3 className="text-gray-900 font-semibold mb-2">Package Includes</h3>
+          <ul className="list-disc list-inside text-gray-600 mb-6 marker:text-[#E55C24]">
             {product.packageIncludes.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
 
-          <h3 className="font-semibold mb-2">Software</h3>
+          <h3 className="text-gray-900 font-semibold mb-2">Software</h3>
           <p className="text-gray-600">{product.software}</p>
         </div>
+      </div>
       </div>
 
       {/* 3D MODAL */}
