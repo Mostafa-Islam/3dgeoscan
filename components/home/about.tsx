@@ -15,7 +15,7 @@ const CheckmarkIcon = () => (
 
 export default function About() {
   return (
-    <section id="about" className="py-32 bg-white h-screen snap-start flex items-center justify-center">
+    <section id="about" className="py-16 md:py-24 lg:py-32 bg-white h-screen md:snap-start flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* main content */}
@@ -23,57 +23,58 @@ export default function About() {
 
           {/* left side - text */}
           <div>
-            <h2 className="lg:text-sm font-bold text-orange-500 mb-8">
+            <span className="text-sm font-bold text-orange-500 mb-8">
               About us
-            </h2>
+            </span>
 
-            <h3 className="text-4xl lg:text-5xl sm:text-2xl font-bold text-gray-900 mb-4 leading-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               We are the architects of precision
             </h3>
 
             <p className="text-gray-600 mb-6 leading-relaxed ">
-              a gateway to unlocking the earth's potential in ways never
-              before imagined.
-              {/* <br /><br /> */}
-              from the great pyramid to intricate artifacts, we capture the
-              world in stunning detail, millimeter by millimeter.
+              3D Geoscan is an Egyptian company delivering reliable,
+              state-of-the-art 3D geospatial and 3D modeling solutions.
+              We don't dabble—we provide full end-to-end services
+              using the latest technologies from trusted, market-leading brands.
             </p>
 
-            <h3 className="lg:text-2xl text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-              Bridging History & Innovation Since 2019
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              What We Do & Why It Matters
             </h3>
 
             <p className="text-gray-600 leading-relaxed">
-              Founded in Alexandria, Egypt, 3D Geoscan emerged from a passion for
-              combining engineering expertise
-              with cutting-edge scanning technologies  to solve real-world challenges
+              Our portfolio includes Mobile Data Collection, 3D Scanning, 3D Printing,
+              Ground Penetration Radar, and Pipeline Mapping. The result?
+              Higher-quality outputs, faster project delivery,
+              and productivity boosts that make timelines shorter
+              and results sharper. Less waiting, more winning.
             </p>
 
             {/* features list */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               <div className="flex items-start gap-3">
                 <CheckmarkIcon />
-                <span className="lg:text-sm text-gray-700">Latest generation FARO & Leica laser scanners</span>
+                <span className="text-sm text-gray-700">Latest generation FARO & Leica laser scanners</span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckmarkIcon />
-                <span className="lg:text-sm text-gray-700">Cloud-based data delivery platform</span>
+                <span className="text-sm text-gray-700">Cloud-based data delivery platform</span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckmarkIcon />
-                <span className="lg:text-sm text-gray-700">Seamless BIM & CAD integration</span>
+                <span className="text-sm text-gray-700">Seamless BIM & CAD integration</span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckmarkIcon />
-                <span className="lg:text-sm text-gray-700">Comprehensive training programs</span>
+                <span className="text-sm text-gray-700">Comprehensive training programs</span>
               </div>
             </div>
 
           </div>
 
           {/* right side - logo with icons */}
-          <div className="flex justify-center">
-            <div className="relative w-96 h-96">
+          <div className="hidden lg:flex justify-center">
+            <div className="relative w-64 h-64 lg:w-96 lg:h-96">
 
               {/* center logo */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24">

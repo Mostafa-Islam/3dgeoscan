@@ -1,18 +1,19 @@
 'use client';
 
 import Polymesh from '@/components/layout/polymesh';
+import AnimatedCounter from './animated-counter';
 
 const StatsSection = () => {
 
   const stats = [
     { value: '100', suffix: '+', label: 'Projects' },
     { value: '100', suffix: '+', label: 'TB Storage' },
-    { value: '24,000', suffix: '', label: 'm² Scanned' },
+    { value: '24,000', suffix: '+', label: 'm² Scanned' },
     { value: '20', suffix: '+', label: 'm² Digitized' }
   ];
 
   return (
-    <section id = "stats" className="w-full bg-white h-screen snap-start pt-[80px]">
+    <section id="stats" className="w-full bg-white h-screen md:snap-start pt-20">
       <div className="w-full h-full flex items-center justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
           {/* Left side - Animated background */}
@@ -20,35 +21,38 @@ const StatsSection = () => {
             <div className="absolute inset-0 w-full h-full opacity-90">
               <Polymesh />
             </div>
-            <div className="relative z-10 flex flex-col justify-center h-full p-12">
-              <span className="lg:text-sm font-bold text-orange-500 mb-4">Why choose us</span>
-              <h2 className="text-4xl lg:text-5xl sm:text-2xl font-bold text-white mb-4 leading-tight">
+            <div className="relative z-10 flex flex-col justify-center h-full p-6 md:p-8 lg:p-12">
+              <span className="text-sm font-bold text-orange-500 mb-4">Why choose us</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 Industry-Leading Capabilities
               </h2>
               <p className="text-[#AEAEAE] leading-relaxed">
-              With the largest fleet of laser scanning equipment in the MENA region
-              and a team of certified professionals,
+                With the largest fleet of laser scanning equipment in the MENA region
+                and a team of certified professionals,
                 we deliver unmatched precision  and efficiency on every project
-            </p>
+              </p>
             </div>
           </div>
 
           {/* Right side - Stats grid */}
-            <div className="bg-white p-12 flex items-center">
-            <div className="grid grid-cols-2 gap-12 w-full">
+          <div className="bg-white p-6 md:p-8 lg:p-12 flex items-center">
+            <div className="grid grid-cols-2 gap-6 md:gap-8 lg:gap-12 w-full">
               {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                {stat.value}
-                <span className="text-orange-500">{stat.suffix}</span>
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 flex justify-center">
+                    <AnimatedCounter
+                      end={parseInt(stat.value.replace(/,/g, ''))}
+                      suffix={stat.suffix}
+                      duration={2500} // You can tweak speed here
+                    />
+                  </div>
+                  <div className="text-sm md:text-base text-gray-600">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-sm md:text-base text-gray-600">
-                {stat.label}
-                </div>
-              </div>
               ))}
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </section>
