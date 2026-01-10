@@ -222,7 +222,7 @@ export default function Products() {
                             </div>
 
                             {/* CTA Buttons */}
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex justify-center md:justify-start flex-wrap gap-4">
                                 <button className={`${brandBgClass} text-white font-semibold py-2 px-6 md:py-3 md:px-8 rounded-lg hover:opacity-90 transition cursor-pointer`}>
                                     Get a Quote
                                 </button>
@@ -242,7 +242,7 @@ export default function Products() {
                 </div>
 
                 {/* Bottom Pagination Dots */}
-                <div className="flex justify-center items-center gap-3 mt-6 md:mt-10">
+                <div className="flex justify-center items-center gap-3 mt-8 md:mt-10">
                     {products.map((_, index) => (
                         <button
                             key={index}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Typewriter from "./typewriter";
 
 export default function Hero() {
   return (
@@ -20,9 +21,9 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* small tag */}
-        <div className="inline-flex items-center gap-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-500 px-4 py-2 mb-6">
+        <div className="inline-flex items-center gap-3 bg-orange-500/10 backdrop-blur-sm rounded-full border-orange-500 px-4 py-2 mb-6">
           <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-          <span className="text-white text-sm font-medium">
+          <span className="block text-[#F36F21] font-bold tracking-widest text-lg md:text-xl uppercase">
             A jump into the future
           </span>
         </div>
@@ -33,7 +34,7 @@ export default function Hero() {
           <br />
           Transformed by
           <br />
-          <span className="text-orange-500">3D Geo-Intelligence</span>
+          <Typewriter words={["Precision Scanning", "Digital Innovation", "3D Geo-Intelligence"]} />
         </h1>
 
         {/* description */}
