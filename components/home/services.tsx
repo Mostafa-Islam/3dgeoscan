@@ -44,17 +44,17 @@ export default function Services() {
                             className={`group relative rounded-2xl p-6 md:p-8 bg-[#E9E9E9] text-black relative overflow-hidden transition-all hover:shadow-2xl`}
                         >
                             <div
-                                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0">
                                 <img src={service.image}
                                     className="h-full w-full object-cover" alt="Background" />
                                 <div className="absolute inset-0 bg-black/50"></div>
                             </div>
-                            <svg className="absolute top-0 right-8 opacity-30 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0" width="127" height="129" viewBox="0 0 127 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="absolute top-0 right-8 opacity-0 -translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-30" width="127" height="129" viewBox="0 0 127 129" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M63.5 -42.5L127 -5.8606V91.8606L63.5 128.5L0 91.8606V67.3543L63.1157 103.85L105.844 79.6475V55.2212L42.328 18.5657L63.5 6.35256L105.844 30.7789V6.35256L63.5 -18.0736L21.172 6.35256V30.7789L84.8002 67.3543L63.5 79.6475L0 43.008V-5.8606L63.5 -42.5Z" fill="#cacacaff" />
                             </svg>
                             <div className="relative z-10">
                                 <div
-                                    className={`w-12 h-12 rounded-full bg-[#2C2C31] flex items-center justify-center mb-4 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0`}
+                                    className={`w-12 h-12 rounded-full bg-[#2C2C31] flex items-center justify-center mb-4 transition-all duration-500 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100`}
                                 >
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.0700073 3.73L10.96 0L21.72 3.7L22.1 4.48L21.97 16.54L10.97 22.27L0.380005 16.75L0 15.99L0.0700073 3.73ZM19.56 4.38C19.7 4.20001 19.04 3.89 18.87 3.81C16.59 2.72 13.55 2.15999 11.18 1.14999L2.80002 4L10.95 8L19.56 4.38ZM10.56 8.97L1.14999 4.84V15.84L10.56 20.66V8.97ZM20.9 5.07001L11.48 8.97V20.68L20.9 15.75V5.07001Z" fill="white" />
@@ -63,8 +63,8 @@ export default function Services() {
                                     </svg>
 
                                 </div>
-                                <h3 className="text-black text-xl md:text-2xl font-bold mb-3 transition-all duration-500 group-hover:translate-y-20 group-hover:text-white">{service.title}</h3>
-                                <p className="text-sm md:text-base text-gray-600 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0">{service.description}</p>
+                                <h3 className="text-white text-xl md:text-2xl font-bold mb-3 translate-y-28 md:translate-y-20 transition-all duration-500 group-hover:translate-y-0 group-hover:text-black">{service.title}</h3>
+                                <p className="text-sm md:text-base text-white/90 transition-all duration-500 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-gray-600">{service.description}</p>
                             </div>
                         </div>
                     ))}

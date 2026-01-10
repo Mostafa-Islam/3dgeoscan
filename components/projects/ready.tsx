@@ -9,20 +9,20 @@ export default function Ready() {
         
 
         {/* main title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-          Ready to start your{" "}
-          <span className="text-orange-500">project?</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          Ready To Start Your{" "}
+          <span className="text-orange-500">Project?</span>
         </h2>
 
         {/* description */}
-        <p className="text-gray-500 text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-gray-500 text-base font-semibold sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
           Get in touch to discuss how 3D scanning can transform your next project.
         </p>
 
         {/* button */}
         <Link
           href="/contact"
-          className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white px-8 py-4 rounded-lg text-base font-medium hover:from-orange-500 hover:to-orange-700 transition-colors"
+          className="inline-block bg-[#E55C24] text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-orange-600 transition-colors"
         >
           Contact Us
         </Link>

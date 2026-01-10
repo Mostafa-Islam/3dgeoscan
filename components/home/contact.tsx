@@ -12,10 +12,10 @@ export default function Contact() {
             
             <div className="relative z-10 text-center px-4 sm:px-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                    DISCOVER YOUR PROJECT
+                    GET A QUOTE FOR YOUR PROJECT
                 </h2>
                 
-                <button className="w-full sm:w-[189px] h-[48px] rounded-[300px] p-[10px] gap-[10px] flex items-center justify-center bg-[#2C2C31] text-white font-semibold hover:bg-[#3C3C41] transition-colors duration-300 mx-auto">
+                <button className="w-full sm:w-[189px] h-[48px] rounded-[300px] p-[10px] gap-[10px] flex items-center justify-center bg-[#2C2C31] text-white font-semibold hover:bg-[#3C3C41] transition-colors duration-300 mx-auto cursor-pointer">
                     Contact Us
                 </button>
             </div>

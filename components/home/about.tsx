@@ -23,30 +23,31 @@ export default function About() {
 
           {/* left side - text */}
           <div>
-            <h2 className="text-sm font-bold text-orange-500 mb-8">
+            <span className="text-sm font-bold text-orange-500 mb-8">
               About us
-            </h2>
+            </span>
 
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               We are the architects of precision
             </h3>
 
             <p className="text-gray-600 mb-6 leading-relaxed ">
-              a gateway to unlocking the earth's potential in ways never
-              before imagined.
-              {/* <br /><br /> */}
-              from the great pyramid to intricate artifacts, we capture the
-              world in stunning detail, millimeter by millimeter.
+              3D Geoscan is an Egyptian company delivering reliable,
+              state-of-the-art 3D geospatial and 3D modeling solutions.
+              We don't dabble—we provide full end-to-end services
+              using the latest technologies from trusted, market-leading brands.
             </p>
 
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4">
-              Bridging History & Innovation Since 2019
+              What We Do & Why It Matters
             </h3>
 
             <p className="text-gray-600 leading-relaxed">
-              Founded in Alexandria, Egypt, 3D Geoscan emerged from a passion for
-              combining engineering expertise
-              with cutting-edge scanning technologies  to solve real-world challenges
+              Our portfolio includes Mobile Data Collection, 3D Scanning, 3D Printing,
+              Ground Penetration Radar, and Pipeline Mapping. The result?
+              Higher-quality outputs, faster project delivery,
+              and productivity boosts that make timelines shorter
+              and results sharper. Less waiting, more winning.
             </p>
 
             {/* features list */}
