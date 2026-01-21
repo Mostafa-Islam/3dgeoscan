@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Logo3D from "../Logo3D";
 const AWARDS = [
   { title: "the most award award", icon: "/images/icon-award.png" },
   { title: "the most award award", icon: "/images/icon-award.png" },
@@ -79,15 +79,10 @@ export default function About() {
           <div className="hidden lg:flex justify-center">
             <div className="relative w-64 h-64 lg:w-96 lg:h-96">
 
-              {/* center logo */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24">
-                <Image
-                  src="/images/logo.png"
-                  alt="3d geoscan logo"
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-contain"
-                />
+
+              {/* 3D Logo in center - FULL SIZE */}
+              <div className="absolute inset-0 z-10">
+                <Logo3D />
               </div>
               {/* inner circular border */}
               <div className="absolute inset-10 border-2 border-dashed border-orange-200 rounded-full animate-orbit">
