@@ -1,11 +1,11 @@
 export default function Projects() {
     const projects = [
-        { name :"El Morssi Abo El Abbas Mosque ", tag: "3D scan to BIM", image: "/images/almorssimosque.png" },
-        { name: "Saudi Consulate", tag: "3D scan to BIM", image: "/images/saudiconsulate.jpg" },
-        { name: "Knauf Gypsum Factory", tag: "3D scan to BIM", image: "/images/knauf.png" },
-        { name: "Movenpick", tag: "3D scan to BIM", image: "/images/movenpick.jpg" },
-        { name: "Steel Warehouse", tag: "3D scan to BIM", image: "/images/steelwarehouse.jpg" },
-        { name: "Monorail", tag: "3D scan to BIM", image: "/images/monorail.jpg" },
+        { name :"El Morssi Abo El Abbas Mosque ", tag: "Heritage", image: "/images/almorssimosque.png" },
+        { name: "Saudi Consulate", tag: "Heritage", image: "/images/saudiconsulate.jpg" },
+        { name: "Knauf Gypsum Factory", tag: "Industrial", image: "/images/knauf.png" },
+        { name: "Movenpick", tag: "Architecture", image: "/images/movenpick.jpg" },
+        { name: "Steel Warehouse", tag: "Industrial", image: "/images/steelwarehouse.jpg" },
+        { name: "Monorail", tag: "Transportation", image: "/images/monorail.jpg" },
     ]
 
     return (

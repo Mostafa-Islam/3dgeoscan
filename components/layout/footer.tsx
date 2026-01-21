@@ -42,8 +42,7 @@ export default function Footer() {
                 className="w-8 h-8 object-contain"
               />
               <span className="text-lg font-bold">
-                <span className="text-orange-500">3D</span>
-                <span className="text-white"> GEOSCAN</span>
+                <span className="text-white">3D GEOSCAN</span>
               </span>
             </Link>
             <p className="text-white/60 text-sm">

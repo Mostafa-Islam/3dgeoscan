@@ -43,28 +43,31 @@ export default function About() {
             </h3>
 
             <p className="text-gray-600 leading-relaxed">
-              Our portfolio includes Mobile Data Collection, 3D Scanning, 3D Printing,
-              Ground Penetration Radar, and Pipeline Mapping. The result?
-              Higher-quality outputs, faster project delivery,
-              and productivity boosts that make timelines shorter
-              and results sharper. Less waiting, more winning.
+              Our portfolio of
+              3D solutions includes (but not limited to)
+              Mobile Data Collection, 3D Scanning, 3D Printing, Ground
+              Penetrating Radar, and Pipeline Mapping.
+              The result? Higher
+              quality outputs, faster project delivery, and
+              productivity boosts that make timelines shorter and results
+              sharper. Less waiting, more winning.
             </p>
 
             {/* features list */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <CheckmarkIcon />
-                <span className="text-sm text-gray-700">Latest generation FARO & Leica laser scanners</span>
+                <span className="text-sm text-gray-700">Latest generation of laser scanners</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <CheckmarkIcon />
-                <span className="text-sm text-gray-700">Cloud-based data delivery platform</span>
+                <span className="text-sm text-gray-700">Strong servers for data processing & archiving</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <CheckmarkIcon />
                 <span className="text-sm text-gray-700">Seamless BIM & CAD integration</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <CheckmarkIcon />
                 <span className="text-sm text-gray-700">Comprehensive training programs</span>
               </div>
@@ -228,7 +231,6 @@ export default function About() {
                     <path d="M0 58.0879V60.5056H9.17504V49.1402L12.5847 45.7099V55.5875L18.97 49.2022V58.1292H11.5308V60.5263H21.3671V46.7844L27.7524 40.4198L27.4631 0L12.5847 14.8784V24.3635L2.76903 34.1997V55.5875L6.77795 51.5786V58.1292H0V58.0879ZM15.0024 24.8387L15.1057 21.801L15.0024 21.9044V15.829L25.0866 5.74473L25.314 39.3865L14.9817 49.7188L15.0024 24.8387ZM5.18681 49.6361V35.0677L12.502 27.7524L12.0267 42.7755L5.16612 49.6361H5.18681Z" fill="#A9A9A9" />
                     <path d="M25.0865 58.0879V60.5057H36.3694V49.3882L39.5724 46.1852L40.089 19.094L30.294 28.8683V55.5875L33.9723 51.9092V58.1086H25.0865V58.0879ZM32.7117 49.8221V29.9635L37.5679 25.1074L37.1753 45.2553L32.7324 49.7188L32.7117 49.8221Z" fill="#A9A9A9" />
                   </svg>
-
                 </div>
 
                 {/* outer border - bottom-left */}

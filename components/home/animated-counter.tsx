@@ -31,6 +31,7 @@ function useIsInView(ref: React.RefObject<HTMLElement | null>) {
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
+  unit?: string;
   suffix?: string;
   className?: string;
 }
@@ -38,6 +39,7 @@ interface AnimatedCounterProps {
 export default function AnimatedCounter({ 
   end, 
   duration = 2000, 
+  unit = "",
   suffix = "", 
   className = "" 
 }: AnimatedCounterProps) {
@@ -81,7 +83,11 @@ export default function AnimatedCounter({
   return (
     <span ref={ref} className={`tabular-nums flex items-baseline ${className}`}>
       {count.toLocaleString()}
-      
+      {unit
+        && <span className={`text-gray-900 transition-all duration-500 ease-out
+          ${isCompleted ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-0 -rotate-180'}`
+        }>{unit}</span>
+      }
       {suffix && (
         <span 
           className={`

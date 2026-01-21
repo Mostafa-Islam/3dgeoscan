@@ -6,10 +6,10 @@ import AnimatedCounter from './animated-counter';
 const StatsSection = () => {
 
   const stats = [
-    { value: '100', suffix: '+', label: 'Projects' },
+    { value: '60', suffix: '+', label: 'Projects' },
     { value: '100', suffix: '+', label: 'TB Storage' },
-    { value: '24,000', suffix: '+', label: 'm² Scanned' },
-    { value: '20', suffix: '+', label: 'm² Digitized' }
+    { value: '10', unit: 'M', suffix: '+', label: 'm² Scanned' },
+    { value: '7', unit: 'M', suffix: '+', label: 'm² Digitized' }
   ];
 
   return (
@@ -27,9 +27,9 @@ const StatsSection = () => {
                 Industry-Leading Capabilities
               </h2>
               <p className="text-[#AEAEAE] leading-relaxed">
-                With the largest fleet of laser scanning equipment in the MENA region
-                and a team of certified professionals,
-                we deliver unmatched precision  and efficiency on every project
+                With the latest equipment of laser scanning in the MENA
+                region and a team of certified professionals, we deliver
+                unmatched precision and efficiency on every project
               </p>
             </div>
           </div>
@@ -42,6 +42,7 @@ const StatsSection = () => {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 flex justify-center">
                     <AnimatedCounter
                       end={parseInt(stat.value.replace(/,/g, ''))}
+                      unit={stat.unit}
                       suffix={stat.suffix}
                       duration={2500} // You can tweak speed here
                     />
