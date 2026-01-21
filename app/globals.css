@@ -10,9 +10,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-brand-orange: #E65525;
+  --color-brand-dark: #1a1a1a;
+  --color-brand-light: #f8f9fa;
+  --color-primary: #E86A33;
+  --color-primary-dark: #C85A28; 
+  --color-dark: #1a1a1a;
+  --color-dark-gray: #2d2d2d;
+  
   /* Define the keyframes */
   --animate-orbit: orbit 20s linear infinite;
   --animate-counter-orbit: counter-orbit 20s linear infinite;
+  --animate-scan: scan 4s infinite linear;
 
   @keyframes orbit {
     to {
@@ -25,13 +35,70 @@
       transform: rotate(-360deg);
     }
   }
+
   @keyframes complexShimmer {
-  0%   { opacity: 0.3; } /* Start dim */
-  25%  { opacity: 0.6; } /* Slight glow */
-  45%  { opacity: 0.3; } /* Dim again */
-  60%  { opacity: 1.0; } /* FULL BRIGHTNESS FLASH */
-  80%  { opacity: 0.5; } /* Fade out slowly */
-  100% { opacity: 0.3; } /* Back to start */
+    0% {
+      opacity: 0.3;
+    }
+
+    /* Start dim */
+    25% {
+      opacity: 0.6;
+    }
+
+    /* Slight glow */
+    45% {
+      opacity: 0.3;
+    }
+
+    /* Dim again */
+    60% {
+      opacity: 1.0;
+    }
+
+    /* FULL BRIGHTNESS FLASH */
+    80% {
+      opacity: 0.5;
+    }
+
+    /* Fade out slowly */
+    100% {
+      opacity: 0.3;
+    }
+
+    /* Back to start */
+  }
+
+  @keyframes scan {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 0.8;
+    }
+
+    90% {
+      opacity: 0.8;
+    }
+
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
 
@@ -50,20 +117,23 @@ body {
 
 /* Apply RNG to create varied shimmer effects */
 /* Group 1: Standard speed */
-.polygons > g:nth-child(odd) {
+.polygons>g:nth-child(odd) {
   animation: complexShimmer 6s ease-in-out infinite;
 }
+
 /* Group 2: Slower, creating a "background hum" */
-.polygons > g:nth-child(2n) {
+.polygons>g:nth-child(2n) {
   animation: complexShimmer 9s ease-in-out infinite;
   animation-delay: 1s;
 }
+
 /* Group 3: Faster, creating "active data" spikes */
-.polygons > g:nth-child(3n) {
+.polygons>g:nth-child(3n) {
   animation: complexShimmer 4s ease-in-out infinite;
   animation-delay: 2.5s;
 }
+
 /* Group 4: Offset to fill the gaps */
-.polygons > g:nth-child(5n) {
+.polygons>g:nth-child(5n) {
   animation-delay: 4s;
 }
