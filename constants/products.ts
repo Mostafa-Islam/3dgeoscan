@@ -8,6 +8,7 @@ export type Product = {
   packageIncludes: string[];
   software: string;
   sketchfabUrl: string;
+  keyFeatures?: string[];  // Add this
 };
 
 export const products: Product[] = [
@@ -28,6 +29,10 @@ export const products: Product[] = [
     software: "GeoSLAM Hub",
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
+    keyFeatures: [
+      "Highly accurate 3D data capture",
+      "Works in any environment",
+    ],
   },
   {
     id: 2,
@@ -45,5 +50,51 @@ export const products: Product[] = [
     software: "GeoSLAM Connect",
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
+    keyFeatures: [
+      "Immersive colorized point clouds",
+      "Perfect ZEB Horizon addition",
+    ],
+  },
+  {
+    id: 3,
+    slug: "faro-blink",
+    title: "FARO® Blink™",
+    logos: ["FARO"],
+    description:
+      "Fast and accurate laser scanning for any project.",
+    productImage: "/images/product-4.png",
+    packageIncludes: [
+      "FARO Blink Scanner",
+      "Mounting Bracket",
+      "Connection Cables",
+    ],
+    software: "FARO Connect",
+    sketchfabUrl:
+      "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
+    keyFeatures: [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+    ],
+  },
+  {
+    id: 4,
+    slug: "faro-blink-pro",
+    title: "FARO® Blink™ Pro",
+    logos: ["FARO"],
+    description:
+      "Professional grade laser scanning solution.",
+    productImage: "/images/product-4.png",
+    packageIncludes: [
+      "FARO Blink Pro Scanner",
+      "Mounting Bracket",
+      "Connection Cables",
+    ],
+    software: "FARO Connect Pro",
+    sketchfabUrl:
+      "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
+    keyFeatures: [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+    ],
   },
 ];
