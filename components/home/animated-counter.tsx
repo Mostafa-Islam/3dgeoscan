@@ -85,14 +85,14 @@ export default function AnimatedCounter({
       {count.toLocaleString()}
       {unit
         && <span className={`text-gray-900 transition-all duration-500 ease-out
-          ${isCompleted ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-0 -rotate-180'}`
+          ${isCompleted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'}`
         }>{unit}</span>
       }
       {suffix && (
         <span 
           className={`
             ml-1 text-[#F36F21] inline-block origin-center transition-all duration-500 ease-out
-            ${isCompleted ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-0 -rotate-180'}
+            ${isCompleted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'}
           `}
         >
           {suffix}

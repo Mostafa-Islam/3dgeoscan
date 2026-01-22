@@ -39,12 +39,12 @@ const StatsSection = () => {
             <div className="grid grid-cols-2 gap-6 md:gap-8 lg:gap-12 w-full">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 flex justify-center">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 ml-2 flex justify-center">
                     <AnimatedCounter
                       end={parseInt(stat.value.replace(/,/g, ''))}
                       unit={stat.unit}
                       suffix={stat.suffix}
-                      duration={2500} // You can tweak speed here
+                      duration={1500} // You can tweak speed here
                     />
                   </div>
                   <div className="text-sm md:text-base text-gray-600">
