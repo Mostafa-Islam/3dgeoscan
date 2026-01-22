@@ -1,12 +1,8 @@
+import { projects } from "@/constants/projects"
+import Link from "next/link"
+
 export default function Projects() {
-    const projects = [
-        { name :"El Morssi Abo El Abbas Mosque ", tag: "Heritage", image: "/images/almorssimosque.png" },
-        { name: "Saudi Consulate", tag: "Heritage", image: "/images/saudiconsulate.jpg" },
-        { name: "Knauf Gypsum Factory", tag: "Industrial", image: "/images/knauf.png" },
-        { name: "Movenpick", tag: "Architecture", image: "/images/movenpick.jpg" },
-        { name: "Steel Warehouse", tag: "Industrial", image: "/images/steelwarehouse.jpg" },
-        { name: "Monorail", tag: "Transportation", image: "/images/monorail.jpg" },
-    ]
+
 
     return (
         <section id="projects" className="min-h-screen md:h-screen md:snap-start flex items-center bg-white py-10 md:pt-20 md:pb-0">
@@ -21,7 +17,9 @@ export default function Projects() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 [&:has(.card:hover)_.card:not(:hover)]:opacity-70 
                 [&:has(.card:hover)_.card:not(:hover)]:blur-[1px] 
                 transition-all duration-500">
-                    <div className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer h-48 md:h-64 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card">
+                    <Link
+                        className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer h-48 md:h-64 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card"
+                        href={`/projects#project-${projects[0].id}`}>
                         <img src={projects[0].image || "/placeholder.svg"} alt="Project" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div>
@@ -31,9 +29,11 @@ export default function Projects() {
                                 <h3 className="text-white text-2xl font-bold">{projects[0].name}</h3>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer h-48 md:h-64 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card">
+                    <Link
+                    href={`/projects#project-${projects[1].id}`}
+                        className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer h-48 md:h-64 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card">
                         <img src={projects[1].image || "/placeholder.svg"} alt="Project" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div>
@@ -43,10 +43,10 @@ export default function Projects() {
                                 <h3 className="text-white text-2xl font-bold">{projects[1].name}</h3>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                     {projects.slice(2).map((project, idx) => (
-                        <div key={idx} className="relative rounded-2xl overflow-hidden group cursor-pointer h-40 md:h-48 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card">
+                        <Link key={idx} href={`/projects#project-${project.id}`} className="relative rounded-2xl overflow-hidden group cursor-pointer h-40 md:h-48 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border-4 border-transparent hover:border-orange-500 card">
                             <img src={project.image || "/placeholder.svg"} alt="Project" className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
                                 <div>
@@ -56,7 +56,7 @@ export default function Projects() {
                                     <h3 className="text-white font-bold">{project.name}</h3>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

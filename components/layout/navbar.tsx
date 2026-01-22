@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { label: "About us", href: "/#about" },
+  // { label: "About us", href: "/#about" },
   { label: "Products", href: "/products" },
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
@@ -128,10 +128,10 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="block mt-4 bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors text-center"
+              className="block mt-4 bg-orange-500 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
-              contact us
+              Contact us
             </Link>
           </div>
         )}

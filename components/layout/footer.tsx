@@ -4,10 +4,11 @@ import Link from "next/link";
 import { CONTACT_INFO, SOCIALS } from "@/constants/contact";
 
 const NAV_LINKS = [
-  { label: "About Us", href: "/#about" },
+  // { label: "About Us", href: "/#about" },
   { label: "Products", href: "/products" },
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
+  // { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {

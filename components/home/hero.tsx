@@ -37,7 +37,7 @@ export default function Hero() {
         
 
         {/* description */}
-        <p>
+        <p className="text-gray-300 sm:text-lg">
            A World Transformed by <Typewriter words={["Precision Scanning", "Digital Innovation", "3D Geo-Intelligence"]} />
         </p>
         <p className="text-gray-300 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
