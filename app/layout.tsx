@@ -1,12 +1,13 @@
 'use client'
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poly } from "next/font/google";
 import { usePathname } from "next/navigation";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import ScrollIndicator from "@/components/layout/scroll-indicator";
+import PolymeshCursor from "@/components/layout/polymesh-cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <meta name="description" content="professional 3d geospatial scanning solutions" />
       </head>
       <body className={`${inter.className} overflow-y-scroll`}>
+        <PolymeshCursor />
         <Navbar />
         <ScrollIndicator />
         <main className=" w-full">{children}</main>
