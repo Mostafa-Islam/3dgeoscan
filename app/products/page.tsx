@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ProductsHero from '@/components/products/our_products';
 import ProductsContent from '@/components/products/products-content';
 
@@ -5,7 +6,9 @@ export default function ProductsPage() {
     return (
         <main>
             <ProductsHero />
-            <ProductsContent />
+            <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
+                <ProductsContent />
+            </Suspense>
         </main>
     );
 }
