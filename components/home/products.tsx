@@ -155,7 +155,7 @@ export default function Products() {
                                         Get a Quote
                                     </button>
                                     <button
-                                        onClick={() => router.push(`/products/${currentProduct.slug}`)}
+                                        onClick={() => router.push(`/products?product=${currentProduct.slug}`)}
                                         className="bg-white text-[#E55C24] border-2 border-[#E55C24] font-semibold py-2 px-6 md:py-3 md:px-8 rounded-lg hover:bg-orange-50 transition cursor-pointer"
                                     >
                                         Learn More

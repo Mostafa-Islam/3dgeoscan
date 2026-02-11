@@ -1,6 +1,6 @@
+// components/products/main_product.tsx
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { Product } from '@/constants/products';
 
 interface MainProductProps {
@@ -8,9 +8,16 @@ interface MainProductProps {
 }
 
 export default function MainProduct({ product }: MainProductProps) {
-    const router = useRouter();
     const brandColorClass = 'text-orange-600';
     const brandBgClass = 'bg-[#E55C24]';
+
+    const handleLearnMore = () => {
+        // Scroll to main product section (already viewing details)
+        const mainProductSection = document.getElementById('main-product');
+        if (mainProductSection) {
+            mainProductSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <section id="main-product" className="py-16 md:py-20 bg-white scroll-mt-24">
@@ -85,7 +92,7 @@ export default function MainProduct({ product }: MainProductProps) {
                                 Get a Quote
                             </button>
                             <button
-                                onClick={() => router.push(`/products/${product.slug}`)}
+                                onClick={handleLearnMore}
                                 className="bg-white text-[#E55C24] border-2 border-[#E55C24] font-semibold py-2 px-6 md:py-3 md:px-8 rounded-lg hover:bg-orange-50 transition cursor-pointer"
                             >
                                 Learn More
