@@ -121,7 +121,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="md:w-2/3 p-8 md:p-12">
-                        <form className="space-y-6">
+                        <form className="space-y-6 text-gray-900">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
@@ -155,10 +155,10 @@ export default function ContactSection() {
                                         defaultValue="Select a service..."
                                         className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none appearance-none cursor-pointer transition duration-200 text-gray-600">
                                         <option disabled>Select a service...</option>
-                                        <option>Architectural / Lidar Scanning</option>
-                                        <option>Scan to BIM</option>
-                                        <option>Reverse Engineering</option>
-                                        <option>Industrial Inspection</option>
+                                        <option>3D Scanning</option>
+                                        <option>Underground Utilities</option>
+                                        <option>Digital Twin</option>
+                                        <option>Geophysical Studies</option>
                                     </select>
                                     <div
                                         className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
@@ -170,7 +170,7 @@ export default function ContactSection() {
                                 </div>
                             </div>
 
-                            <div>
+                            {/* <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">Project Files (Optional)</label>
                                 <div
                                     className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-50 hover:border-brand-orange transition cursor-pointer relative group">
@@ -186,7 +186,7 @@ export default function ContactSection() {
                                             upload</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
