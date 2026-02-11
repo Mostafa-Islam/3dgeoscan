@@ -14,87 +14,68 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 1,
-    slug: "zeb-horizon",
-    title: "ZEB Horizon",
-    logos: ["GeoSLAM"],
+    slug: "faro-orbis",
+    title: "FARO® Orbis™",
+    logos: ["sphere-xg.jpg"],
     description:
-      "The ZEB Horizon is a handheld mobile mapping scanner that captures highly accurate 3D data in any environment.",
-    productImage: "/images/product-1.png",
+      "FARO Orbis 2 in 1 Mobile Laser Scanner and stationery scanner all in one device. A unique mobile scanning solution created to optimize workflows and elevate productivity. scan while moving with 6 mm accuracy and you can stop for 15 seconds to scan a station with accuracy 2 mm, Designed for construction, engineering and surveying professionals, Orbis delivers rapid speed of capture, while returning highly accurate 3D visual representations of the real world thru 360 camera for point cloud colorization.",
+    productImage: "/images/product-3.png",
     packageIncludes: [
-      "ZEB Horizon Scanner",
+      "Scanner",
       "Rechargeable Battery",
       "Charging Dock",
       "Protective Carry Case",
     ],
-    software: "GeoSLAM Hub",
+    software: "FARO Sphere® XG",
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
     keyFeatures: [
-      "Highly accurate 3D data capture",
-      "Works in any environment",
+      "Lightweight and Easy-to-Use",
+      "Engineered for the Toughest Environments",
     ],
   },
   {
     id: 2,
-    slug: "zeb-vision",
-    title: "ZEB Vision",
-    logos: ["GeoSLAM"],
+    slug: "faro-focus",
+    title: "FARO® Focus",
+    logos: ["scene.png"],
     description:
-      "Vision is the perfect addition to the ZEB Horizon with immersive colorized point clouds.",
-    productImage: "/images/product-2.png",
+      "Your tool to capture, view and understand the world around you. Great for indoor and outdoor use, including spaces where features are positioned further apart. Lightweight and rugged, simple to use, fast to capture and easy to process giving you the most accurate information you need to make the most important decisions.",
+    productImage: "/images/product-4.png",
     packageIncludes: [
-      "ZEB Vision Camera",
-      "Mounting Bracket",
-      "Connection Cables",
+      "Scanner",
+      "Rechargeable Battery",
+      "Charging Dock",
+      "Protective Carry Case",
     ],
-    software: "GeoSLAM Connect",
+    software: "FARO® SCENE Software",
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
     keyFeatures: [
-      "Immersive colorized point clouds",
-      "Perfect ZEB Horizon addition",
+      "high-speed SSD data storage",
+      "Withstand the harshest environments daily",
     ],
   },
   {
     id: 3,
     slug: "faro-blink",
     title: "FARO® Blink™",
-    logos: ["FARO"],
+    logos: ["sphere-xg.jpg"],
     description:
-      "Fast and accurate laser scanning for any project.",
-    productImage: "/images/product-4.png",
+      "From site to insights, Blink is a reality capture solution designed for simplicity and accessibility. It brings high-quality visualization and automated workflows into the hands of designers, builders, surveyors, operators, and public safety professionals, helping teams capture, view, and share data seamlessly, regardless of expertise. With Blink, anyone can take control of reality capture on-site and move projects to final delivery efficiently.",
+    productImage: "/images/product-5.png",
     packageIncludes: [
-      "FARO Blink Scanner",
-      "Mounting Bracket",
-      "Connection Cables",
+      "Scanner",
+      "Rechargeable Battery",
+      "Charging Dock",
+      "Protective Carry Case",
     ],
-    software: "FARO Connect",
+    software: "FARO Sphere® XG",
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
     keyFeatures: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-    ],
-  },
-  {
-    id: 4,
-    slug: "faro-blink-pro",
-    title: "FARO® Blink™ Pro",
-    logos: ["FARO"],
-    description:
-      "Professional grade laser scanning solution.",
-    productImage: "/images/product-4.png",
-    packageIncludes: [
-      "FARO Blink Pro Scanner",
-      "Mounting Bracket",
-      "Connection Cables",
-    ],
-    software: "FARO Connect Pro",
-    sketchfabUrl:
-      "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
-    keyFeatures: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
+      "Guided Scanning with Real-Time Feedback",
+      "Automatic Point Cloud Processing",
     ],
   },
 ];

@@ -112,16 +112,17 @@ export default function Products() {
                                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{currentProduct.title}</h3>
 
                                 {/* Simple Logo/Badge placeholder row */}
-                                <div className="flex items-center gap-4 mb-6">
+                                <div className="flex items-center gap-4 mb-4">
                                     {currentProduct.logos.map((logo, i) => (
-                                        <span key={i} className="font-bold text-gray-700 text-sm tracking-widest uppercase border border-gray-300 px-2 py-1 rounded">
-                                            {logo}
-                                        </span>
+                                        // <span key={i} className="font-bold text-gray-700 text-sm tracking-widest uppercase border border-gray-300 px-2 py-1 rounded">
+                                        //     {logo}
+                                        // </span>
+                                        <img key={i} src={`/images/${logo}`} alt="" className='h-12'/>
                                     ))}
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6 md:mb-8">
+                                <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6 md:mb-8 line-clamp-3">
                                     {currentProduct.description}
                                 </p>
 
