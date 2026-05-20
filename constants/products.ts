@@ -190,3 +190,6 @@ export const products: Product[] = [
   },
 
 ];
+
+/** Product titles for contact-form interest chips */
+export const productContactLabels = products.map((p) => p.title);

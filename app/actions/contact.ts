@@ -12,6 +12,7 @@ export async function sendEmailAction(formData: FormData) {
   const email = String(formData.get('email') ?? '').trim();
   const phone = String(formData.get('phone') ?? '').trim();
   const serviceInterest = String(formData.get('serviceInterest') ?? '').trim();
+  const productInterest = String(formData.get('productInterest') ?? '').trim();
   const projectDetails = String(formData.get('projectDetails') ?? '').trim();
 
   // 2. Simple validation
@@ -30,6 +31,7 @@ export async function sendEmailAction(formData: FormData) {
       email,
       phone,
       serviceInterest,
+      productInterest,
       projectDetails,
     });
 

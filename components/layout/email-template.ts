@@ -6,7 +6,19 @@ interface EmailTemplateProps {
   email: string;
   phone: string;
   serviceInterest: string;
+  productInterest: string;
   projectDetails: string;
+}
+
+function interestPillsHtml(value: string): string {
+  const items = value
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (items.length === 0) {
+    return '<span class="pill">Not specified</span>';
+  }
+  return items.map((item) => `<span class="pill">${item}</span>`).join(' ');
 }
 
 export function generateContactEmailHtml({
@@ -15,6 +27,7 @@ export function generateContactEmailHtml({
   email,
   phone,
   serviceInterest,
+  productInterest,
   projectDetails,
 }: EmailTemplateProps): string {
   return `
@@ -57,8 +70,13 @@ export function generateContactEmailHtml({
             </div>
 
             <div class="section">
-              <span class="label">Service Needed:</span><br/>
-              <span class="pill">${serviceInterest || 'Not specified'}</span>
+              <span class="label">Service Interest:</span><br/>
+              ${interestPillsHtml(serviceInterest)}
+            </div>
+
+            <div class="section">
+              <span class="label">Product Interest:</span><br/>
+              ${interestPillsHtml(productInterest)}
             </div>
 
             <div class="section">

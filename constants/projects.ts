@@ -249,7 +249,7 @@ export const projects = [
         challange: "Massive grinding machinery and dense piping networks create extreme vibrations and \"data shadows,\" hiding critical structural connections and making it impossible to capture clear, stable measurements from a single position.",
         solution: "We deploy High-Resolution Terrestrial Laser Scanning from multiple elevated platforms. By using vibration-filtering settings and overlapping scan stations, we eliminate noise to capture every pipe and bolt for a complete 3D model.",
         image: "/images/arabiancement.webp",
-        videoUrl: "https://youtu.be/pnhmCdplAC4?si=uFyEnzRuKHgqdI1F",
+        videoUrl: "",
     },
     {
         id: '19',
