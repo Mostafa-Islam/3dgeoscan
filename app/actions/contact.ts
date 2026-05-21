@@ -38,7 +38,7 @@ export async function sendEmailAction(formData: FormData) {
     // 3. Send the email using Resend
     const { error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>', // Use this exact address for testing
-      to: 'moh.hazemhf@gmail.com', // MUST be the email you used to sign up for Resend
+      to: 'sales@3dgeoscan.com', // MUST be the email you used to sign up for Resend
       subject: `New 3D Scanning Inquiry from ${firstName} ${lastName}`,
       html: htmlContent,
     });
