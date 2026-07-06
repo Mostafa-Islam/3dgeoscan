@@ -7,10 +7,10 @@ import GraphLine from '../layout/graph-line';
 const StatsSection = () => {
 
   const stats = [
-    { value: '60', suffix: '+', label: 'Projects' },
-    { value: '100', suffix: '+', label: 'TB Storage' },
-    { value: '10', unit: 'M', suffix: '+', label: 'm² Scanned' },
-    { value: '7', unit: 'M', suffix: '+', label: 'm² Digitized' }
+    { value: '70', suffix: '+', label: 'Projects' },
+    { value: '120', suffix: '+', label: 'TB Storage' },
+    { value: '11', unit: 'M', suffix: '+', label: 'm² Scanned' },
+    { value: '8', unit: 'M', suffix: '+', label: 'm² Digitized' }
   ];
 
   return (

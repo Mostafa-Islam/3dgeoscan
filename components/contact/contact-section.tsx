@@ -1,29 +1,27 @@
 "use client";
 
 import { CONTACT_INFO, SOCIALS } from "@/constants/contact";
+import { productContactLabels } from "@/constants/products";
 import Link from "next/link";
 import { useState } from "react";
 import { sendEmailAction } from "@/app/actions/contact";
 
+const SERVICES = [
+    "3D Scanning",
+    "Underground Utilities",
+    "Digital Twin",
+    "Geophysical Studies",
+    "Other",
+] as const;
+
+function toggleSelection(list: string[], item: string) {
+    return list.includes(item) ? list.filter((s) => s !== item) : [...list, item];
+}
+
 export default function ContactSection() {
     const [selectedServices, setSelectedServices] = useState<string[]>([]);
+    const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-    
-    const services = [
-        "3D Scanning",
-        "Underground Utilities",
-        "Digital Twin",
-        "Geophysical Studies",
-        "Other"
-    ];
-    
-    const toggleService = (service: string) => {
-        setSelectedServices(prev => 
-            prev.includes(service) 
-                ? prev.filter(s => s !== service)
-                : [...prev, service]
-        );
-    };
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,6 +37,7 @@ export default function ContactSection() {
             setStatus('success');
             form.reset();
             setSelectedServices([]);
+            setSelectedProducts([]);
         }
   }
     
@@ -196,11 +195,11 @@ export default function ContactSection() {
                                     )}
                                 </label>
                                 <div className="flex flex-wrap gap-3">
-                                    {services.map((service) => (
+                                    {SERVICES.map((service) => (
                                         <button
                                             key={service}
                                             type="button"
-                                            onClick={() => toggleService(service)}
+                                            onClick={() => setSelectedServices((prev) => toggleSelection(prev, service))}
                                             className={`px-5 py-2.5 rounded-full font-medium transition-all duration-200 cursor-pointer ${
                                                 selectedServices.includes(service)
                                                     ? 'bg-brand-orange text-white shadow-md hover:shadow-lg hover:bg-[#c9461d] transform hover:scale-105'
@@ -212,6 +211,32 @@ export default function ContactSection() {
                                     ))}
                                 </div>
                                 <input name="serviceInterest" type="hidden" value={selectedServices.join(", ")} />
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    Product Interest
+                                    {selectedProducts.length > 0 && (
+                                        <span className="text-brand-orange ml-2">({selectedProducts.length} selected)</span>
+                                    )}
+                                </label>
+                                <div className="flex flex-wrap gap-3">
+                                    {productContactLabels.map((product) => (
+                                        <button
+                                            key={product}
+                                            type="button"
+                                            onClick={() => setSelectedProducts((prev) => toggleSelection(prev, product))}
+                                            className={`px-5 py-2.5 rounded-full font-medium transition-all duration-200 cursor-pointer ${
+                                                selectedProducts.includes(product)
+                                                    ? 'bg-brand-orange text-white shadow-md hover:shadow-lg hover:bg-[#c9461d] transform hover:scale-105'
+                                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200'
+                                            }`}
+                                        >
+                                            {product}
+                                        </button>
+                                    ))}
+                                </div>
+                                <input name="productInterest" type="hidden" value={selectedProducts.join(", ")} />
                             </div>
 
                             {/* <div>

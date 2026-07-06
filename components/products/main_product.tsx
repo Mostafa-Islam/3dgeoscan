@@ -84,7 +84,7 @@ export default function MainProduct({ product }: MainProductProps) {
                             {/* Logos — hardware only */}
                             {product.type === 'hardware' && (
                                 <div>
-                                    <h4 className="font-bold text-gray-900 mb-3">Software</h4>
+                                    <h4 className="font-bold text-gray-900 mb-3">Applicable Software</h4>
                                     <div className="flex flex-wrap items-center gap-3">
                                         {product.logos.map((logo, i) => (
                                             <img key={i} src={`/images/${logo}`} alt="" className='h-12' />

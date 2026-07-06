@@ -43,7 +43,7 @@ export const products: Product[] = [
     slug: "faro-focus",
     type: "hardware",
     title: "FARO® Focus",
-    logos: ["sphere-xg.jpg", "scene.png"],
+    logos: ["scene.png"],
     description:
       "Your tool to capture, view and understand the world around you. Great for indoor and outdoor use, including spaces where features are positioned further apart. Lightweight and rugged, simple to use, fast to capture and easy to process giving you the most accurate information you need to make the most important decisions.",
     productImage: "/images/product-4.png",
@@ -53,7 +53,7 @@ export const products: Product[] = [
       "Charging Dock",
       "Protective Carry Case",
     ],
-    software: ["FARO Sphere® XG", "FARO® SCENE Software"],
+    software: ["FARO® SCENE Software"],
     sketchfabUrl:
       "https://sketchfab.com/models/282954bbc43c416fac30eb458a6afd0e/embed",
     keyFeatures: [
@@ -124,7 +124,6 @@ export const products: Product[] = [
       "Cloud Platform Access",
       "Stream Mobile App Integration",
       "Collaborative Workspace",
-      "Unlimited Cloud Storage",
     ],
     software: [],
     sketchfabUrl:
@@ -135,7 +134,7 @@ export const products: Product[] = [
       "4D Progress Management (Time Travel)",
       "Integration with Stream Mobile App",
     ],
-    brochure: "/brochures/Brochure_Sphere_AEC_ENG.pdf", // ✅
+    brochure: "https://www.faro.com/en/Products/FARO-Sphere-XG", // ✅
   },
   {
     id: 6,
@@ -190,3 +189,6 @@ export const products: Product[] = [
   },
 
 ];
+
+/** Product titles for contact-form interest chips */
+export const productContactLabels = products.map((p) => p.title);

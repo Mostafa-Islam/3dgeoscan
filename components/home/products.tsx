@@ -113,7 +113,7 @@ export default function Products() {
                                         {/* Software Badge — only shown for software products */}
                                         {product.type === 'software' && (
                                             <span className="inline-block text-sm font-semibold text-[#E55C24] uppercase tracking-widest mb-3">
-                                                Software
+                                                Applicable Software
                                             </span>
                                         )}
 
@@ -141,7 +141,7 @@ export default function Products() {
                                             {/* Logos — only shown for hardware products */}
                                             {product.type === 'hardware' && (
                                                 <div>
-                                                    <h4 className="font-bold text-gray-900 mb-3">Software</h4>
+                                                    <h4 className="font-bold text-gray-900 mb-3">Applicable Software</h4>
                                                     <div className="flex flex-wrap items-center gap-3">
                                                         {product.logos.map((logo, i) => (
                                                             <img key={i} src={`/images/${logo}`} alt="" className='h-12' />

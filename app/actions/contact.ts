@@ -12,6 +12,7 @@ export async function sendEmailAction(formData: FormData) {
   const email = String(formData.get('email') ?? '').trim();
   const phone = String(formData.get('phone') ?? '').trim();
   const serviceInterest = String(formData.get('serviceInterest') ?? '').trim();
+  const productInterest = String(formData.get('productInterest') ?? '').trim();
   const projectDetails = String(formData.get('projectDetails') ?? '').trim();
 
   // 2. Simple validation
@@ -30,13 +31,14 @@ export async function sendEmailAction(formData: FormData) {
       email,
       phone,
       serviceInterest,
+      productInterest,
       projectDetails,
     });
 
     // 3. Send the email using Resend
     const { error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>', // Use this exact address for testing
-      to: 'moh.hazemhf@gmail.com', // MUST be the email you used to sign up for Resend
+      to: 'info@3dgeoscan.com', // MUST be the email you used to sign up for Resend
       subject: `New 3D Scanning Inquiry from ${firstName} ${lastName}`,
       html: htmlContent,
     });
